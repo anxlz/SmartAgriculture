@@ -62,7 +62,7 @@ const ASU = {
 // anxlz social links with real SVG icons
 const ANXLZ_SOCIALS = [
   { Icon: Icons.Github,   label: 'GitHub',   href: 'https://github.com/anxlz' },
-  { Icon: Icons.Twitter,  label: 'Twitter',  href: 'https://twitter.com/anxlz' },
+  { Icon: Icons.Twitter,  label: 'Twitter',  href: 'https://twitter.com/anxace' },
   { Icon: Icons.Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/anxlz' },
 ]
 
