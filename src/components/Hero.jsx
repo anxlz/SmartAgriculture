@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { content } from '../data/content'
-import heroVideo from 'https://res.cloudinary.com/dwxybf8iu/video/upload/v1778090696/hero-video_jmgu3j.mp4'
+import heroVideo from '../assets/hero-video.mp4'
 
 export default function Hero() {
   const { isArabic } = useTheme()
