@@ -5,8 +5,8 @@ import { useTheme } from '../context/ThemeContext'
 // استبدل src بروابط الفيديوهات الحقيقية
 const videos = [
   {
-    src: '/videos/hero-video-1.mp4',       // ← استبدل بالفيديو الأول
-    poster: '/videos/hero-poster-1.jpg',   // ← صورة تحميل اختيارية
+    src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4',       // ← استبدل بالفيديو الأول
+    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/q_auto,f_auto/v1778090696/hero-poster-1.jpg',   // ← صورة تحميل اختيارية
     label: { ar: 'الزراعة الذكية', en: 'Smart Farming' },
   },
   {
