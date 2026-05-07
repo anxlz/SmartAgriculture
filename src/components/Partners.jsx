@@ -9,14 +9,39 @@ const partners = [
     role: { ar: 'شريك أكاديمي', en: 'Academic Partner' },
     desc: {
       ar: 'إحدى أعرق الجامعات المصرية المتميزة في مجالات الزراعة والتكنولوجيا التطبيقية والبحث العلمي.',
-      en: 'One of Egypt\'s most prestigious universities, excelling in agriculture, applied technology, and scientific research.',
+      en: "One of Egypt's most prestigious universities, excelling in agriculture, applied technology, and scientific research.",
     },
-    // Official Ain Shams University logo from Wikipedia Commons
     logo: 'https://upload.wikimedia.org/wikipedia/ar/8/87/AinShamsUniv.png',
     logoFallback: '🏛️',
     link: 'https://www.asu.edu.eg',
     type: 'university',
     tags: { ar: ['زراعة', 'بحث علمي', 'تكنولوجيا'], en: ['Agriculture', 'Research', 'Technology'] },
+  },
+  {
+    name: { ar: 'كلية الزراعة – جامعة عين شمس', en: 'Faculty of Agriculture – ASU' },
+    role: { ar: 'شريك أكاديمي', en: 'Academic Partner' },
+    desc: {
+      ar: 'صرح علمي رائد في تطوير العلوم الزراعية والبيئية، وتخريج كوادر متخصصة في الإنتاج النباتي والحيواني وتقنيات الغذاء.',
+      en: 'A leading academic institution advancing agricultural and environmental sciences, producing specialists in crop production, animal science, and food technology.',
+    },
+    logo: 'https://agr.asu.edu.eg/images/logo.png',
+    logoFallback: '🌾',
+    link: 'https://agr.asu.edu.eg',
+    type: 'faculty',
+    tags: { ar: ['إنتاج نباتي', 'علوم بيئية', 'تقنيات غذاء'], en: ['Crop Science', 'Environment', 'Food Tech'] },
+  },
+  {
+    name: { ar: 'قسم المجتمع الريفي وإرشاد زراعي', en: 'Dept. of Rural Community & Agricultural Extension' },
+    role: { ar: 'شريك بحثي وإرشادي', en: 'Research & Extension Partner' },
+    desc: {
+      ar: 'يختص بدراسة المجتمعات الريفية وتنميتها، وتطوير برامج الإرشاد الزراعي للارتقاء بمستوى المزارعين والمجتمعات الزراعية.',
+      en: 'Dedicated to studying and developing rural communities, and designing agricultural extension programs to empower farmers and agrarian societies.',
+    },
+    logo: 'https://agr.asu.edu.eg/images/logo.png',
+    logoFallback: '🌱',
+    link: 'https://agr.asu.edu.eg',
+    type: 'department',
+    tags: { ar: ['تنمية ريفية', 'إرشاد زراعي', 'مجتمع'], en: ['Rural Dev', 'Extension', 'Community'] },
   },
   {
     name: { ar: 'anxlz', en: 'anxlz' },
@@ -67,16 +92,18 @@ function PartnerCard({ partner, isArabic }) {
   const desc = isArabic ? partner.desc.ar : partner.desc.en
   const tags = isArabic ? partner.tags.ar : partner.tags.en
   const isUni = partner.type === 'university'
+  const isDev = partner.type === 'developer'
+  const isLarge = isUni || partner.type === 'faculty'
 
   return (
-    <a
+    
       href={partner.link}
       target="_blank"
       rel="noopener noreferrer"
       className="card-base group flex flex-col items-center text-center gap-5 hover:border-primary-400 dark:hover:border-primary-600 no-underline"
     >
       {/* Logo / Avatar */}
-      <div className={`relative flex-shrink-0 ${isUni ? 'w-28 h-28' : 'w-24 h-24'}`}>
+      <div className={`relative flex-shrink-0 ${isLarge ? 'w-28 h-28' : 'w-24 h-24'}`}>
         <img
           src={partner.logo}
           alt={name}
@@ -85,18 +112,16 @@ function PartnerCard({ partner, isArabic }) {
             e.target.nextSibling.style.display = 'flex'
           }}
           className={`w-full h-full object-contain drop-shadow-md transition-transform duration-300 group-hover:scale-105 ${
-            isUni ? '' : 'rounded-full ring-4 ring-primary-200 dark:ring-primary-800'
+            isDev ? 'rounded-full ring-4 ring-primary-200 dark:ring-primary-800' : ''
           }`}
         />
         {/* Fallback emoji */}
-        <div
-          className="w-full h-full hidden items-center justify-center text-5xl rounded-full bg-primary-50 dark:bg-primary-900"
-        >
+        <div className="w-full h-full hidden items-center justify-center text-5xl rounded-full bg-primary-50 dark:bg-primary-900">
           {partner.logoFallback}
         </div>
 
-        {/* Dev badge */}
-        {!isUni && (
+        {/* Dev badge only */}
+        {isDev && (
           <span className="absolute -bottom-1 -end-1 w-7 h-7 flex items-center justify-center rounded-full
                            bg-gray-900 text-white text-xs shadow-md border-2 border-white dark:border-gray-800">
             GH

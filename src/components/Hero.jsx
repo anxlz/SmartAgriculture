@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { content } from '../data/content'
 import heroVideo from '../assets/hero-video.mp4'
-
 export default function Hero() {
   const { isArabic } = useTheme()
   const t = isArabic ? content.ar.hero : content.en.hero
