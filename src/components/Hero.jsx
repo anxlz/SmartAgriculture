@@ -184,8 +184,8 @@ export default function Hero() {
               padding:'8px 16px', fontSize:'0.72rem', textAlign:'center',
             }}>
               📁 {isArabic
-                ? 'اعداد الطالب : عبدالرحمن فتحي'
-                : 'Abdulrahman Fathy - Student Project'}
+                ? 'استبدل الملف في: src/assets/hero-video.mp4'
+                : 'Replace file at: src/assets/hero-video.mp4'}
             </div>
           </div>
         </div>
