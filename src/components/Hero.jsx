@@ -5,13 +5,13 @@ import { useTheme } from '../context/ThemeContext'
 // استبدل src بروابط الفيديوهات الحقيقية
 const videos = [
   {
-    src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4',       // ← الفيديو الأول
-    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/q_auto,f_auto/v1778090696/hero-poster-1.jpg',   // ← صورة تحميل اختيارية
+    src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4',       // ← استبدل بالفيديو الأول
+    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/v1778178433/corn-field-young-corn-plants-growing-sun_vz24fx.jpg',   // ← صورة تحميل اختيارية
     label: { ar: 'الزراعة الذكية', en: 'Smart Farming' },
   },
   {
-    src: '/videos/hero-video-2.mp4',       // ← الفيديو الثاني
-    poster: '/videos/hero-poster-2.jpg',   // ← صورة تحميل اختيارية
+    src: 'https://player.cloudinary.com/embed/?cloud_name=dwxybf8iu&public_id=updated_fsis9b',       // ← استبدل بالفيديو الثاني
+    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/v1778186886/tractor-working-green-field_23-2151983626_cn9v0j.avif',   // ← صورة تحميل اختيارية
     label: { ar: 'مجتمعات ريفية', en: 'Rural Communities' },
   },
 ]
