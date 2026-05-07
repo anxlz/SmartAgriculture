@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { content } from '../data/content'
+<<<<<<< HEAD
 import heroVideo from '../assets/hero-video.mp4'
+=======
+
+>>>>>>> 3301b20b9a28fa9388cc08e5fdbb70d7ac4c98a0
 export default function Hero() {
   const { isArabic } = useTheme()
   const t = isArabic ? content.ar.hero : content.en.hero
   const [videoOpen, setVideoOpen] = useState(false)
+  const heroVideo =
+    "https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4";
 
   return (
     <>
@@ -182,8 +188,8 @@ export default function Hero() {
               padding:'8px 16px', fontSize:'0.72rem', textAlign:'center',
             }}>
               📁 {isArabic
-                ? 'اعداد الطالب : عبدالرحمن فتحي'
-                : 'Abdulrahman Fathy - Student Project'}
+                ? 'استبدل الملف في: src/assets/hero-video.mp4'
+                : 'Replace file at: src/assets/hero-video.mp4'}
             </div>
           </div>
         </div>

@@ -23,7 +23,7 @@ function StatCard({ item, isArabic }) {
 
   const displayValue = item.isFloat
     ? (count / 10).toFixed(1)
-    : count.toLocaleString('en-US')
+    : count.toLocaleString(isArabic ? 'ar-EG' : 'en-US')
 
   return (
     <div
