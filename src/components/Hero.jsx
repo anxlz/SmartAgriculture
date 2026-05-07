@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useTheme } from '../context/ThemeContext'
 import { content } from '../data/content'
-import heroVideo from '../assets/hero-video.mp4'
 
 export default function Hero() {
   const { isArabic } = useTheme()
   const t = isArabic ? content.ar.hero : content.en.hero
   const [videoOpen, setVideoOpen] = useState(false)
+  const heroVideo =
+    "https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4";
 
   return (
     <>
