@@ -5,14 +5,14 @@ import { content } from '../data/content'
 // ─── الفيديوهات ────────────────────────────────────────────────────────────
 const videos = [
   {
-    src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4',
-    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/v1778178433/corn-field-young-corn-plants-growing-sun_vz24fx.jpg',
-    label: { ar: 'الزراعة الذكية', en: 'Smart Farming' },
-  },
-  {
     src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/updated_fsis9b',
     poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/v1778186886/tractor-working-green-field_23-2151983626_cn9v0j.avif',
-    label: { ar: 'مجتمعات ريفية', en: 'Rural Communities' },
+    label: { ar: 'شرح الزراعة الذكية', en: 'Smart Farming' },
+  },
+  {
+    src: 'https://res.cloudinary.com/dwxybf8iu/video/upload/q_auto,f_auto/v1778090696/hero-video_jmgu3j.mp4',
+    poster: 'https://res.cloudinary.com/dwxybf8iu/image/upload/v1778178433/corn-field-young-corn-plants-growing-sun_vz24fx.jpg',
+    label: { ar: 'دليل الزراعة الذكية', en: 'Smart Farming Guide' },
   },
 ]
 // ──────────────────────────────────────────────────────────────────────────
