@@ -21,6 +21,7 @@ export default function Hero() {
   const { isArabic } = useTheme()
   const [current, setCurrent] = useState(0)
   const [fading, setFading] = useState(false)
+  const [playing, setPlaying] = useState(true)
   const videoRef = useRef(null)
   const intervalRef = useRef(null)
 
@@ -47,6 +48,18 @@ export default function Hero() {
         videoRef.current.play().catch(() => {})
       }
     }, 400)
+  }
+
+  function togglePlay() {
+    if (!videoRef.current) return
+    if (playing) {
+      videoRef.current.pause()
+      clearInterval(intervalRef.current)
+    } else {
+      videoRef.current.play().catch(() => {})
+      startAutoPlay()
+    }
+    setPlaying(!playing)
   }
 
   function goTo(idx) {
@@ -137,8 +150,23 @@ export default function Hero() {
             ›
           </button>
 
-          {/* Dot Indicators */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3">
+          {/* Dot Indicators + Play/Pause */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4">
+            {/* Play / Pause Button */}
+            <button
+              onClick={togglePlay}
+              aria-label={playing ? 'Pause' : 'Play'}
+              className="w-8 h-8 flex items-center justify-center rounded-full
+                         bg-white/20 hover:bg-white/40 text-white backdrop-blur-sm
+                         border border-white/40 transition-all duration-200 shadow text-sm"
+            >
+              {playing ? '⏸' : '▶'}
+            </button>
+
+            {/* Divider */}
+            <span className="w-px h-4 bg-white/30" />
+
+            {/* Dots */}
             {videos.map((v, i) => (
               <button
                 key={i}
