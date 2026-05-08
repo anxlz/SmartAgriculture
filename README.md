@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![Smart Agriculture](https://res.cloudinary.com/dwxybf8iu/image/upload/v1778178433/corn-field-young-corn-plants-growing-sun_vz24fx.jpg)
-
 **A bilingual Arabic/English platform connecting science to the field,
 empowering rural communities across Egypt.**
 
